@@ -1,0 +1,771 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26A7F2370E5966B54633E395 /* Pods_MindValleyMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47AB98F1E140934C7E5B1A9 /* Pods_MindValleyMobileTestTests.framework */; };
+		4807F69D22BEC5DE00C289B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F69C22BEC5DE00C289B0 /* AppDelegate.swift */; };
+		4807F6A222BEC5DE00C289B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4807F6A022BEC5DE00C289B0 /* Main.storyboard */; };
+		4807F6A422BEC5E300C289B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4807F6A322BEC5E300C289B0 /* Assets.xcassets */; };
+		4807F6A722BEC5E300C289B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4807F6A522BEC5E300C289B0 /* LaunchScreen.storyboard */; };
+		4807F6B222BEC5E300C289B0 /* MindValleyMobileTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F6B122BEC5E300C289B0 /* MindValleyMobileTestTests.swift */; };
+		4807F6EF22BECCD500C289B0 /* PinModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F6E922BECCD500C289B0 /* PinModelResponse.swift */; };
+		4807F6F022BECCD500C289B0 /* Profile_image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F6EA22BECCD500C289B0 /* Profile_image.swift */; };
+		4807F6F122BECCD500C289B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F6EB22BECCD500C289B0 /* User.swift */; };
+		4807F6F222BECCD500C289B0 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F6EC22BECCD500C289B0 /* Urls.swift */; };
+		4807F6F322BECCD500C289B0 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F6ED22BECCD500C289B0 /* Categories.swift */; };
+		4807F6F422BECCD500C289B0 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F6EE22BECCD500C289B0 /* Links.swift */; };
+		4807F6F722BECDC300C289B0 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F6F622BECDC300C289B0 /* PinterestLayout.swift */; };
+		4807F6FA22BECEDE00C289B0 /* PinsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F6F922BECEDE00C289B0 /* PinsCollectionViewCell.swift */; };
+		4807F6FC22BECF7A00C289B0 /* PinsCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F6FB22BECF7A00C289B0 /* PinsCollectionViewDataSource.swift */; };
+		4807F72622C01BD500C289B0 /* PinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F72522C01BD500C289B0 /* PinViewModel.swift */; };
+		4807F72A22C0BFF800C289B0 /* PinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F72922C0BFF800C289B0 /* PinModel.swift */; };
+		4807F73222C0C26300C289B0 /* MOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F72D22C0C26300C289B0 /* MOperationQueue.swift */; };
+		4807F73322C0C26300C289B0 /* MOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F72E22C0C26300C289B0 /* MOperation.swift */; };
+		4807F73422C0C26300C289B0 /* MOperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F72F22C0C26300C289B0 /* MOperationManager.swift */; };
+		4807F73522C0C26300C289B0 /* MOperationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F73022C0C26300C289B0 /* MOperationResponse.swift */; };
+		4807F73622C0C26300C289B0 /* MloadDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F73122C0C26300C289B0 /* MloadDataOperation.swift */; };
+		4807F73822C0CCB200C289B0 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F73722C0CCB200C289B0 /* HTTPClient.swift */; };
+		48533CC922C368080042CDA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48533CC822C368080042CDA5 /* Constants.swift */; };
+		48533CCB22C384580042CDA5 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48533CCA22C384580042CDA5 /* CategoryCollectionViewCell.swift */; };
+		48C158DF22C0D2D500BF7541 /* MUrlCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C158DE22C0D2D500BF7541 /* MUrlCache.swift */; };
+		48C158E122C0EC2000BF7541 /* PinBoardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C158E022C0EC2000BF7541 /* PinBoardCollectionViewController.swift */; };
+		48C158E322C0EE6700BF7541 /* Extension+Dispactch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C158E222C0EE6700BF7541 /* Extension+Dispactch.swift */; };
+		48C158E622C0EECA00BF7541 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C158E522C0EECA00BF7541 /* ImageCache.swift */; };
+		48C158E822C0F8BF00BF7541 /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C158E722C0F8BF00BF7541 /* Extension+UIImageView.swift */; };
+		48C158EA22C11B1700BF7541 /* PinBoardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C158E922C11B1700BF7541 /* PinBoardDetailsViewController.swift */; };
+		70CF962379D3861404828193 /* Pods_MindValleyMobileTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E831B998A417AA4CB90F7E70 /* Pods_MindValleyMobileTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4807F6AE22BEC5E300C289B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4807F69122BEC5DE00C289B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4807F69822BEC5DE00C289B0;
+			remoteInfo = MindValleyMobileTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03921EB9FEBDCA82DCEB057C /* Pods-MindValleyMobileTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyMobileTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindValleyMobileTestTests/Pods-MindValleyMobileTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		1022C7FC70F454FDF2F917D5 /* Pods-MindValleyMobileTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyMobileTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindValleyMobileTest/Pods-MindValleyMobileTest.debug.xcconfig"; sourceTree = "<group>"; };
+		4807F69922BEC5DE00C289B0 /* MindValleyMobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindValleyMobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4807F69C22BEC5DE00C289B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4807F6A122BEC5DE00C289B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4807F6A322BEC5E300C289B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4807F6A622BEC5E300C289B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4807F6A822BEC5E300C289B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4807F6AD22BEC5E300C289B0 /* MindValleyMobileTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindValleyMobileTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4807F6B122BEC5E300C289B0 /* MindValleyMobileTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValleyMobileTestTests.swift; sourceTree = "<group>"; };
+		4807F6B322BEC5E300C289B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4807F6E922BECCD500C289B0 /* PinModelResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinModelResponse.swift; sourceTree = "<group>"; };
+		4807F6EA22BECCD500C289B0 /* Profile_image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile_image.swift; sourceTree = "<group>"; };
+		4807F6EB22BECCD500C289B0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4807F6EC22BECCD500C289B0 /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		4807F6ED22BECCD500C289B0 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		4807F6EE22BECCD500C289B0 /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		4807F6F622BECDC300C289B0 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		4807F6F922BECEDE00C289B0 /* PinsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4807F6FB22BECF7A00C289B0 /* PinsCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinsCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		4807F72522C01BD500C289B0 /* PinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewModel.swift; sourceTree = "<group>"; };
+		4807F72922C0BFF800C289B0 /* PinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinModel.swift; sourceTree = "<group>"; };
+		4807F72D22C0C26300C289B0 /* MOperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOperationQueue.swift; sourceTree = "<group>"; };
+		4807F72E22C0C26300C289B0 /* MOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOperation.swift; sourceTree = "<group>"; };
+		4807F72F22C0C26300C289B0 /* MOperationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOperationManager.swift; sourceTree = "<group>"; };
+		4807F73022C0C26300C289B0 /* MOperationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOperationResponse.swift; sourceTree = "<group>"; };
+		4807F73122C0C26300C289B0 /* MloadDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MloadDataOperation.swift; sourceTree = "<group>"; };
+		4807F73722C0CCB200C289B0 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		48533CC822C368080042CDA5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		48533CCA22C384580042CDA5 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		48C158DE22C0D2D500BF7541 /* MUrlCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUrlCache.swift; sourceTree = "<group>"; };
+		48C158E022C0EC2000BF7541 /* PinBoardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinBoardCollectionViewController.swift; sourceTree = "<group>"; };
+		48C158E222C0EE6700BF7541 /* Extension+Dispactch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Dispactch.swift"; sourceTree = "<group>"; };
+		48C158E522C0EECA00BF7541 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		48C158E722C0F8BF00BF7541 /* Extension+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
+		48C158E922C11B1700BF7541 /* PinBoardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinBoardDetailsViewController.swift; sourceTree = "<group>"; };
+		76B01876D28CA91DE26DFAF5 /* Pods-MindValleyMobileTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyMobileTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindValleyMobileTest/Pods-MindValleyMobileTest.release.xcconfig"; sourceTree = "<group>"; };
+		C3617AA98B78B391DA68F27A /* Pods-MindValleyMobileTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyMobileTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindValleyMobileTestTests/Pods-MindValleyMobileTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E47AB98F1E140934C7E5B1A9 /* Pods_MindValleyMobileTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValleyMobileTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E831B998A417AA4CB90F7E70 /* Pods_MindValleyMobileTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValleyMobileTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4807F69622BEC5DE00C289B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70CF962379D3861404828193 /* Pods_MindValleyMobileTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4807F6AA22BEC5E300C289B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26A7F2370E5966B54633E395 /* Pods_MindValleyMobileTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23CC1BDA7D020254C4873205 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1022C7FC70F454FDF2F917D5 /* Pods-MindValleyMobileTest.debug.xcconfig */,
+				76B01876D28CA91DE26DFAF5 /* Pods-MindValleyMobileTest.release.xcconfig */,
+				C3617AA98B78B391DA68F27A /* Pods-MindValleyMobileTestTests.debug.xcconfig */,
+				03921EB9FEBDCA82DCEB057C /* Pods-MindValleyMobileTestTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4807F69022BEC5DE00C289B0 = {
+			isa = PBXGroup;
+			children = (
+				4807F69B22BEC5DE00C289B0 /* MindValleyMobileTest */,
+				4807F6B022BEC5E300C289B0 /* MindValleyMobileTestTests */,
+				4807F69A22BEC5DE00C289B0 /* Products */,
+				4807F6FD22BED2E900C289B0 /* Frameworks */,
+				23CC1BDA7D020254C4873205 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		4807F69A22BEC5DE00C289B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4807F69922BEC5DE00C289B0 /* MindValleyMobileTest.app */,
+				4807F6AD22BEC5E300C289B0 /* MindValleyMobileTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4807F69B22BEC5DE00C289B0 /* MindValleyMobileTest */ = {
+			isa = PBXGroup;
+			children = (
+				48C158E422C0EEB200BF7541 /* Cache */,
+				4807F72C22C0C25400C289B0 /* LoadingLibrary */,
+				4807F6F822BECEC300C289B0 /* UICollectionViewCells */,
+				4807F6F522BECCEA00C289B0 /* UICollectionViewDataSource */,
+				4807F6C222BEC69200C289B0 /* Networking */,
+				4807F6C122BEC68200C289B0 /* Resources */,
+				4807F6C022BEC65E00C289B0 /* StoryBoards */,
+				4807F6BF22BEC64900C289B0 /* Extensions */,
+				4807F6BE22BEC63600C289B0 /* DataViewModel */,
+				4807F6BD22BEC62D00C289B0 /* DataModels */,
+				4807F6BC22BEC62100C289B0 /* UIViewControllers */,
+				4807F69C22BEC5DE00C289B0 /* AppDelegate.swift */,
+				4807F6F622BECDC300C289B0 /* PinterestLayout.swift */,
+			);
+			path = MindValleyMobileTest;
+			sourceTree = "<group>";
+		};
+		4807F6B022BEC5E300C289B0 /* MindValleyMobileTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				4807F6B122BEC5E300C289B0 /* MindValleyMobileTestTests.swift */,
+				4807F6B322BEC5E300C289B0 /* Info.plist */,
+			);
+			path = MindValleyMobileTestTests;
+			sourceTree = "<group>";
+		};
+		4807F6BC22BEC62100C289B0 /* UIViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				48C158E022C0EC2000BF7541 /* PinBoardCollectionViewController.swift */,
+				48C158E922C11B1700BF7541 /* PinBoardDetailsViewController.swift */,
+			);
+			path = UIViewControllers;
+			sourceTree = "<group>";
+		};
+		4807F6BD22BEC62D00C289B0 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				4807F6ED22BECCD500C289B0 /* Categories.swift */,
+				4807F6EE22BECCD500C289B0 /* Links.swift */,
+				4807F6E922BECCD500C289B0 /* PinModelResponse.swift */,
+				4807F6EA22BECCD500C289B0 /* Profile_image.swift */,
+				4807F6EC22BECCD500C289B0 /* Urls.swift */,
+				4807F6EB22BECCD500C289B0 /* User.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		4807F6BE22BEC63600C289B0 /* DataViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4807F72522C01BD500C289B0 /* PinViewModel.swift */,
+				4807F72922C0BFF800C289B0 /* PinModel.swift */,
+			);
+			path = DataViewModel;
+			sourceTree = "<group>";
+		};
+		4807F6BF22BEC64900C289B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				48C158E222C0EE6700BF7541 /* Extension+Dispactch.swift */,
+				48C158E722C0F8BF00BF7541 /* Extension+UIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4807F6C022BEC65E00C289B0 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				4807F6A022BEC5DE00C289B0 /* Main.storyboard */,
+				4807F6A522BEC5E300C289B0 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		4807F6C122BEC68200C289B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4807F6A322BEC5E300C289B0 /* Assets.xcassets */,
+				4807F6A822BEC5E300C289B0 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4807F6C222BEC69200C289B0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4807F73722C0CCB200C289B0 /* HTTPClient.swift */,
+				48533CC822C368080042CDA5 /* Constants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4807F6F522BECCEA00C289B0 /* UICollectionViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				4807F6FB22BECF7A00C289B0 /* PinsCollectionViewDataSource.swift */,
+			);
+			path = UICollectionViewDataSource;
+			sourceTree = "<group>";
+		};
+		4807F6F822BECEC300C289B0 /* UICollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4807F6F922BECEDE00C289B0 /* PinsCollectionViewCell.swift */,
+				48533CCA22C384580042CDA5 /* CategoryCollectionViewCell.swift */,
+			);
+			path = UICollectionViewCells;
+			sourceTree = "<group>";
+		};
+		4807F6FD22BED2E900C289B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E831B998A417AA4CB90F7E70 /* Pods_MindValleyMobileTest.framework */,
+				E47AB98F1E140934C7E5B1A9 /* Pods_MindValleyMobileTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4807F72C22C0C25400C289B0 /* LoadingLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				4807F72E22C0C26300C289B0 /* MOperation.swift */,
+				4807F72D22C0C26300C289B0 /* MOperationQueue.swift */,
+				4807F73022C0C26300C289B0 /* MOperationResponse.swift */,
+				4807F72F22C0C26300C289B0 /* MOperationManager.swift */,
+				4807F73122C0C26300C289B0 /* MloadDataOperation.swift */,
+				48C158DE22C0D2D500BF7541 /* MUrlCache.swift */,
+			);
+			path = LoadingLibrary;
+			sourceTree = "<group>";
+		};
+		48C158E422C0EEB200BF7541 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				48C158E522C0EECA00BF7541 /* ImageCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4807F69822BEC5DE00C289B0 /* MindValleyMobileTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4807F6B622BEC5E300C289B0 /* Build configuration list for PBXNativeTarget "MindValleyMobileTest" */;
+			buildPhases = (
+				D59F72C8B9C58DE2E4FB36C0 /* [CP] Check Pods Manifest.lock */,
+				4807F69522BEC5DE00C289B0 /* Sources */,
+				4807F69622BEC5DE00C289B0 /* Frameworks */,
+				4807F69722BEC5DE00C289B0 /* Resources */,
+				5679E1FDC3DE258268EF7DF5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MindValleyMobileTest;
+			productName = MindValleyMobileTest;
+			productReference = 4807F69922BEC5DE00C289B0 /* MindValleyMobileTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4807F6AC22BEC5E300C289B0 /* MindValleyMobileTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4807F6B922BEC5E300C289B0 /* Build configuration list for PBXNativeTarget "MindValleyMobileTestTests" */;
+			buildPhases = (
+				4ADC63CD5F5CD04DA51A081A /* [CP] Check Pods Manifest.lock */,
+				4807F6A922BEC5E300C289B0 /* Sources */,
+				4807F6AA22BEC5E300C289B0 /* Frameworks */,
+				4807F6AB22BEC5E300C289B0 /* Resources */,
+				2FC7E7E04CDE467D085EEABF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4807F6AF22BEC5E300C289B0 /* PBXTargetDependency */,
+			);
+			name = MindValleyMobileTestTests;
+			productName = MindValleyMobileTestTests;
+			productReference = 4807F6AD22BEC5E300C289B0 /* MindValleyMobileTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4807F69122BEC5DE00C289B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Engineer 144";
+				TargetAttributes = {
+					4807F69822BEC5DE00C289B0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					4807F6AC22BEC5E300C289B0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 4807F69822BEC5DE00C289B0;
+					};
+				};
+			};
+			buildConfigurationList = 4807F69422BEC5DE00C289B0 /* Build configuration list for PBXProject "MindValleyMobileTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4807F69022BEC5DE00C289B0;
+			productRefGroup = 4807F69A22BEC5DE00C289B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4807F69822BEC5DE00C289B0 /* MindValleyMobileTest */,
+				4807F6AC22BEC5E300C289B0 /* MindValleyMobileTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4807F69722BEC5DE00C289B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4807F6A722BEC5E300C289B0 /* LaunchScreen.storyboard in Resources */,
+				4807F6A422BEC5E300C289B0 /* Assets.xcassets in Resources */,
+				4807F6A222BEC5DE00C289B0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4807F6AB22BEC5E300C289B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2FC7E7E04CDE467D085EEABF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MindValleyMobileTestTests/Pods-MindValleyMobileTestTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindValleyMobileTestTests/Pods-MindValleyMobileTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4ADC63CD5F5CD04DA51A081A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MindValleyMobileTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5679E1FDC3DE258268EF7DF5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MindValleyMobileTest/Pods-MindValleyMobileTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MindValleyMobileTest/Pods-MindValleyMobileTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D59F72C8B9C58DE2E4FB36C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MindValleyMobileTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4807F69522BEC5DE00C289B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48533CC922C368080042CDA5 /* Constants.swift in Sources */,
+				4807F6EF22BECCD500C289B0 /* PinModelResponse.swift in Sources */,
+				4807F6F322BECCD500C289B0 /* Categories.swift in Sources */,
+				48C158EA22C11B1700BF7541 /* PinBoardDetailsViewController.swift in Sources */,
+				4807F6F022BECCD500C289B0 /* Profile_image.swift in Sources */,
+				4807F73222C0C26300C289B0 /* MOperationQueue.swift in Sources */,
+				48533CCB22C384580042CDA5 /* CategoryCollectionViewCell.swift in Sources */,
+				4807F72A22C0BFF800C289B0 /* PinModel.swift in Sources */,
+				4807F6F222BECCD500C289B0 /* Urls.swift in Sources */,
+				4807F6F122BECCD500C289B0 /* User.swift in Sources */,
+				4807F6F722BECDC300C289B0 /* PinterestLayout.swift in Sources */,
+				4807F69D22BEC5DE00C289B0 /* AppDelegate.swift in Sources */,
+				48C158E822C0F8BF00BF7541 /* Extension+UIImageView.swift in Sources */,
+				48C158DF22C0D2D500BF7541 /* MUrlCache.swift in Sources */,
+				4807F72622C01BD500C289B0 /* PinViewModel.swift in Sources */,
+				4807F73422C0C26300C289B0 /* MOperationManager.swift in Sources */,
+				48C158E322C0EE6700BF7541 /* Extension+Dispactch.swift in Sources */,
+				48C158E122C0EC2000BF7541 /* PinBoardCollectionViewController.swift in Sources */,
+				48C158E622C0EECA00BF7541 /* ImageCache.swift in Sources */,
+				4807F6FA22BECEDE00C289B0 /* PinsCollectionViewCell.swift in Sources */,
+				4807F6F422BECCD500C289B0 /* Links.swift in Sources */,
+				4807F73322C0C26300C289B0 /* MOperation.swift in Sources */,
+				4807F73622C0C26300C289B0 /* MloadDataOperation.swift in Sources */,
+				4807F6FC22BECF7A00C289B0 /* PinsCollectionViewDataSource.swift in Sources */,
+				4807F73822C0CCB200C289B0 /* HTTPClient.swift in Sources */,
+				4807F73522C0C26300C289B0 /* MOperationResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4807F6A922BEC5E300C289B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4807F6B222BEC5E300C289B0 /* MindValleyMobileTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4807F6AF22BEC5E300C289B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4807F69822BEC5DE00C289B0 /* MindValleyMobileTest */;
+			targetProxy = 4807F6AE22BEC5E300C289B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4807F6A022BEC5DE00C289B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4807F6A122BEC5DE00C289B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4807F6A522BEC5E300C289B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4807F6A622BEC5E300C289B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4807F6B422BEC5E300C289B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4807F6B522BEC5E300C289B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4807F6B722BEC5E300C289B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1022C7FC70F454FDF2F917D5 /* Pods-MindValleyMobileTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83M7A6W736;
+				INFOPLIST_FILE = "$(SRCROOT)/MindValleyMobileTest/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MindValleyMobileTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4807F6B822BEC5E300C289B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76B01876D28CA91DE26DFAF5 /* Pods-MindValleyMobileTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83M7A6W736;
+				INFOPLIST_FILE = "$(SRCROOT)/MindValleyMobileTest/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MindValleyMobileTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4807F6BA22BEC5E300C289B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3617AA98B78B391DA68F27A /* Pods-MindValleyMobileTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83M7A6W736;
+				INFOPLIST_FILE = MindValleyMobileTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MindValleyMobileTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindValleyMobileTest.app/MindValleyMobileTest";
+			};
+			name = Debug;
+		};
+		4807F6BB22BEC5E300C289B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03921EB9FEBDCA82DCEB057C /* Pods-MindValleyMobileTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83M7A6W736;
+				INFOPLIST_FILE = MindValleyMobileTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MindValleyMobileTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MindValleyMobileTest.app/MindValleyMobileTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4807F69422BEC5DE00C289B0 /* Build configuration list for PBXProject "MindValleyMobileTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4807F6B422BEC5E300C289B0 /* Debug */,
+				4807F6B522BEC5E300C289B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4807F6B622BEC5E300C289B0 /* Build configuration list for PBXNativeTarget "MindValleyMobileTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4807F6B722BEC5E300C289B0 /* Debug */,
+				4807F6B822BEC5E300C289B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4807F6B922BEC5E300C289B0 /* Build configuration list for PBXNativeTarget "MindValleyMobileTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4807F6BA22BEC5E300C289B0 /* Debug */,
+				4807F6BB22BEC5E300C289B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4807F69122BEC5DE00C289B0 /* Project object */;
+}
