@@ -22,42 +22,67 @@ class PinViewModel : NSObject {
             self.bindSourceToModels()
             
         }
-        loadPins()
+      
     }
-    
     
     func loadPins()  {
-        
-        HTTPClient().setURL(url: Constants.BaseURL).response { data in
-            
-           let response = try?  JSONDecoder().decode(PinModelResponse.self, from: data.data!)
-            if response != nil {
-                
-                self.pins = response?.compactMap({ (element) in
-                  
-                         PinModel(pin: element)
-                   
-                   
-                }) ?? []
-                
-                
-            }
-        }
-        
-        
+    
+    
+    let datafromServer = loadPinsFromServer()
+    if datafromServer != nil {
+        self.pins = self.transformResponseToPinModels(response: datafromServer!)
     }
+    
+   }
+    
+    internal func loadPinsFromServer() -> PinModelResponse? {
+    
+    var response: PinModelResponse!
+    let sempahone = DispatchSemaphore(value: 0)
+    
+        HTTPClient(urlString: Constants.BaseURL).response { data in
+        response = try? JSONDecoder().decode(PinModelResponse.self, from: data.data!)
+        sempahone.signal()
+    }
+    
+    _ = sempahone.wait(timeout: .distantFuture)
+    
+    return response
+    
+    }
+    internal func loadPinsFromServer(url: String) -> PinModelResponse? {
+
+     var response: PinModelResponse!
+     let sempahone = DispatchSemaphore(value: 0)
+
+   HTTPClient(urlString: url).response { data in
+    response = try? JSONDecoder().decode(PinModelResponse.self, from: data.data!)
+    sempahone.signal()
+    }
+
+_ = sempahone.wait(timeout: .distantFuture)
+
+return response
+
+}
+    internal  func transformResponseToPinModels(response: PinModelResponse)-> [PinModel] {
+    
+    return  response.compactMap({ (element) in
+        PinModel(pin: element)
+        
+    })
+    
+}
     
     func source(at index:Int) -> PinModel {
         return self.pins[index]
     }
-    
-    
     func invalideCachedData(){
-        
-        MUrlCache.shared.invalidateCache()
-        ImageCache.shared.cache.removeAllObjects()
-  
-    }
+    
+    MUrlCache.shared.invalidateCache()
+    ImageCache.shared.cache.removeAllObjects()
+
+}
     
     
     

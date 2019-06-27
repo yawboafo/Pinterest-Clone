@@ -13,6 +13,7 @@ import UIKit
 private let dataLoader = MOperationManager()
 extension UIImageView {
     
+    
     //Rounded UIImageView
     func rounded(){
         self.layer.cornerRadius = (self.frame.size.width ) / 2
@@ -77,4 +78,8 @@ extension UIImageView {
                         self.image = image},
                         completion: nil)
 }
+    
+    
+
+    
 }

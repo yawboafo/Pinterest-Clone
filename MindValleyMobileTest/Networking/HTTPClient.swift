@@ -31,20 +31,24 @@ class HTTPClient: NSObject {
     
     private let dataLoader = MOperationManager()
     
-    var parameters:[String:String]?
+   private var parameters:[String:String]?
     
-    var url:URL?
+   private var url:URL?
     
-    var method = HTTPMethod.get
+   private var method = HTTPMethod.get
     
-    var headers: [String:String] = {
+  private  var headers: [String:String] = {
         var defaultHeaders = [String:String]()
         defaultHeaders["Content-Type"] = "application/json"
        return defaultHeaders
     }()
     
     
-    
+     init(urlString : String) {
+        if let url = URL(string: urlString) {
+            self.url = url
+        }
+    }
     
     //Use method chanining
     @discardableResult
@@ -61,17 +65,7 @@ class HTTPClient: NSObject {
         
         return self
     }
-    
-    @discardableResult
-    func setURL(url: String?) -> HTTPClient{
-        
-        if let urlString = url {
-            self.url = URL(string: urlString)
-        }
-        
-        return self
-    }
-    
+
     @discardableResult
     func setHeader(header: [String:String]) -> HTTPClient{
         headers.update(other: headers)
@@ -80,7 +74,7 @@ class HTTPClient: NSObject {
     
     
     //Prepare URL for Get Request
-   private func queryString(_ value: String, params: [String: String]) -> String? {
+    private func queryString(_ value: String, params: [String: String]) -> String? {
         var components = URLComponents(string: value)
         components?.queryItems = params.map { element in URLQueryItem(name: element.key, value: element.value) }
         return components?.url?.absoluteString
@@ -90,16 +84,22 @@ class HTTPClient: NSObject {
     //Response
     func response(complete: @escaping (MOperationResponse) -> Void)   {
         
-        makeAPICall(url: self.url!,
+        makeAPICall(url: (self.url!),
                     parameters: JSON(self.parameters ?? [:]),
                     withHTTPmethod: self.method,
                     headers: self.headers )
         { (data) in
-            complete(data)
+            
+           complete(data)
+            
         }
         
     }
     
+    
+    //API Client engine
+    //Format urlString ,create parameters,apply headers
+    // And provide urlrequest to nsoperation queue to do the dirty work
     private func makeAPICall(url: URL,
                      parameters: JSON,
                      withHTTPmethod: HTTPMethod,
@@ -114,11 +114,7 @@ class HTTPClient: NSObject {
         
         
         
-        
-        print("Headers \(self.headers)")
-        print("Parameters \(parameters)")
-        print("URLSTRING \(url.absoluteString)")
-        print("method \(withHTTPmethod)")
+     
         
         
         var urlRequest = URLRequest(url: url)
@@ -140,6 +136,11 @@ class HTTPClient: NSObject {
         }
         
     
+        
+        print("Headers \(self.headers)")
+        print("Parameters \(parameters)")
+        print("URLSTRING \(url.absoluteString)")
+        print("method \(withHTTPmethod)")
         
         
         // DATA Loader is used to to make API CALLS

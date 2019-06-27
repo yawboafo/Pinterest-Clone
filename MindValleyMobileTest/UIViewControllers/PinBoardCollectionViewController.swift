@@ -30,6 +30,7 @@ class PinBoardCollectionViewController: UICollectionViewController, PinterestLay
         setUpResfreshController()
         configurePinterestLayout()
         pinsViewModel = PinViewModel()
+        pinsViewModel.loadPins()
         
         self.pinsViewModel.bindSourceToModels = {
             self.updateDataSource()

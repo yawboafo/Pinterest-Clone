@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26A7F2370E5966B54633E395 /* Pods_MindValleyMobileTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47AB98F1E140934C7E5B1A9 /* Pods_MindValleyMobileTestTests.framework */; };
 		4807F69D22BEC5DE00C289B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807F69C22BEC5DE00C289B0 /* AppDelegate.swift */; };
 		4807F6A222BEC5DE00C289B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4807F6A022BEC5DE00C289B0 /* Main.storyboard */; };
 		4807F6A422BEC5E300C289B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4807F6A322BEC5E300C289B0 /* Assets.xcassets */; };
@@ -90,7 +89,6 @@
 		48C158E922C11B1700BF7541 /* PinBoardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinBoardDetailsViewController.swift; sourceTree = "<group>"; };
 		76B01876D28CA91DE26DFAF5 /* Pods-MindValleyMobileTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyMobileTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MindValleyMobileTest/Pods-MindValleyMobileTest.release.xcconfig"; sourceTree = "<group>"; };
 		C3617AA98B78B391DA68F27A /* Pods-MindValleyMobileTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyMobileTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MindValleyMobileTestTests/Pods-MindValleyMobileTestTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E47AB98F1E140934C7E5B1A9 /* Pods_MindValleyMobileTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValleyMobileTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E831B998A417AA4CB90F7E70 /* Pods_MindValleyMobileTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValleyMobileTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,7 +105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26A7F2370E5966B54633E395 /* Pods_MindValleyMobileTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				E831B998A417AA4CB90F7E70 /* Pods_MindValleyMobileTest.framework */,
-				E47AB98F1E140934C7E5B1A9 /* Pods_MindValleyMobileTestTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

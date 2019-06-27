@@ -90,11 +90,11 @@ class MloadDataOperation: MOperation<MOperationResponse> {
         }else{
             
             //if reponse is not stored make new URLRequest call
-            task = session.dataTask(with: self.urlRequest!) { (data, response, error) in
+            task = session.dataTask(with: self.urlRequest!) { [weak self] (data, response, error) in
                 
                 let _data = MOperationResponse(error as AnyObject,data ?? Data(), response as AnyObject)
-                self.complete(result: _data)
-                self.cancel()
+                self?.complete(result: _data)
+                self?.cancel()
                 
             }
             

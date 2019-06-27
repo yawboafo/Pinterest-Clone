@@ -45,11 +45,11 @@ class PinBoardDetailsViewController: UIViewController {
         self.userProfileImage.rounded()
         self.totalLikesLabel.text = pinModel.likes
         
-         dataSource = PinsCollectionViewDataSource(cellIdentifier: Constants.CategoryCollectionViewCell, items: pinModel?.categories ?? []) { cell, pin in
+         dataSource = PinsCollectionViewDataSource(cellIdentifier: Constants.CategoryCollectionViewCell, items: pinModel?.categories ?? []) { cell, category in
             
-         cell.titleLabel.text = pin
+           cell.titleLabel.text = category
             
-            //cell.titleLabel.text = pin
+         
         }
         
         

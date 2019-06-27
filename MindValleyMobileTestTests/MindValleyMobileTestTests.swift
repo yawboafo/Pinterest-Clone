@@ -12,77 +12,73 @@ import XCTest
 
 class MindValleyMobileTestTests: XCTestCase {
 
+    var pinModel : PinViewModel!
     var pins : [PinModel]!
     var imageCache : ImageCache!
     var defaultImageCacheTotalCostLimit : Int!
     
     
     override func setUp() {
+        
+        pinModel = PinViewModel()
        
         defaultImageCacheTotalCostLimit = ImageCache.shared.cache.totalCostLimit
         
         imageCache =  ImageCache.init(totalCost: 20)
         
-        self.pins = []
+      
         
     }
     override func tearDown() {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
       }
 
-  
-    func test_data_response(){
-        
-        let results = expectation(description: "Decoded response from server to ViewsModel")
-        
-             HTTPClient()
-            .setMethod(.get)
-            .setURL(url: Constants.BaseURL)
-            .setParameter(params: [:])
-            .setHeader(header: [:])
-            .response { data in
-                
-                
-               
-                   
-                    let response = try?  JSONDecoder().decode(PinModelResponse.self, from: data.data!)
-                    if response != nil {
-                        
-                        self.pins = response?.compactMap({ (element) in
-                            
-                            PinModel(pin: element)
-                            
-                            
-                        }) ?? []
-                        XCTAssertNotNil(self.pins)
-                     
-                    }else{
-                        XCTFail("Failed to decode response from server")
-                    }
-                
-                  results.fulfill()
-               }
-        
-        
-        
-        
-        waitForExpectations(timeout: 30) { (error) in
-            XCTAssertNil(error, "Test timed out \(error.debugDescription)")
-        }
-        
-        
-        addTeardownBlock {
-            
-            
-             XCTAssert(self.pins.count > 0 , "We are more than O")
-        }
-    }
-    func test_configurable_cache_totalCost(){
-    
-    
-    XCTAssert(defaultImageCacheTotalCostLimit <  imageCache.cache.totalCostLimit, "Configured Cache Total Cost Limit was updated")
 
+    
+    
+    func test_configurable_cache_totalCost(){
+        
+        
+        XCTAssert(defaultImageCacheTotalCostLimit <  imageCache.cache.totalCostLimit, "Configured Cache Total Cost Limit was updated")
+        
     }
-  
+    func test_pin_response_transformer(){
+    
+    let data = pinModel.loadPinsFromServer()
+    
+    if(data != nil){
+    let dataList = pinModel.transformResponseToPinModels(response: data!)
+        
+        XCTAssertTrue(dataList.count > 0, "Transform was good")
+    }else{
+        XCTAssertFalse(true, "TransFormation  was Bad")
+    }
+    
+    
+    
+}
+    func test_load_pins_from_Server(){
+    
+    XCTAssertNotNil(pinModel.loadPinsFromServer(url: Constants.BaseURL))
+   }
+    func test_api_call_withHTTPclient(){
+    
+    let result = expectation(description: "Returned useful data")
+    HTTPClient(urlString: Constants.BaseURL)
+        .setMethod(.get)
+        .setHeader(header: [:])
+        .setParameter(params: [:])
+        .response { response in
+            XCTAssertNil(response.error, "error occured \(String(describing: response.error))")
+            XCTAssertNotNil(response.data, "pay load data ")
+            result.fulfill()
+    }
+    
+    waitForExpectations(timeout: 10) { error in
+        XCTAssertNil(error, "\(String(describing: error?.localizedDescription))")
+    }
+}
+    
+    
 
 }

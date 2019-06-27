@@ -18,7 +18,7 @@ public class  MOperationQueue {
     lazy var queue: OperationQueue = {
         let queue = OperationQueue()
         queue.name = "MOperationQueue"
-        queue.maxConcurrentOperationCount = 1
+        queue.maxConcurrentOperationCount = 6
         return queue;
     }()
     
